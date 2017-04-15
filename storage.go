@@ -42,7 +42,7 @@ func (sto *Storage) Get(value interface{}) error {
 // 缓存文件
 func (sto *Storage) Store(value interface{}) error {
 	var filepath = path.Join(sto.storpath, sto.name)
-	return write(filepath+".json", value)
+	return write(filepath, value)
 }
 
 // 删除文件
